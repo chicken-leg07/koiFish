@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+/* background section */
+body {
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+}
+
+/* logo section */
+.logo {
+    width: 100px;
+    opacity: 0.8;
+    float: left;
+}
+
+/* sign in btn section started */
+.signInBtn {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 30px;
+    float: right;
+    margin: 10px 20px;
+}
+
+.signInBtn:hover {
+    background-color: #d5a100;
+}
+
+/* sign in btn section ended */
+
+/* lilypad leaf section started  */
+.leave {
+    position: absolute;
+    animation-name: leafMove;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.upLeave1 {
+    top: 0;
+    left: 400px;
+}
+
+.upLeave2 {
+    top: 0;
+    left: 900px;
+}
+
+.downLeave1 {
+    bottom: 0;
+    left: 200px;
+}
+
+.downLeave2 {
+    bottom: 0;
+    left: 900px;
+}
+
+@keyframes leafMove {
+    0% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(-300px);
+    }
+}
+
+.lilypad {
+    animation-name: lilyMove;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.toplilypad {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+
+.bottomlilypad {
+    width: 50px;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+@keyframes lilyMove {
+    to {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+/* lilypad leaf section ended  */
+
+/* about koi pond section started  */
+.aboutKoi {
+    clear: both;
+    color: white;
+    width: 60%;
+    font-size: 18px;
+    margin-left: 10%;
+    text-shadow: 0px 0px 20px rgb(247, 247, 247), 0px 0px 10px rgb(0, 128, 70);
+
+}
+
+.smallTitle {
+    font-size: 15px;
+    margin: 10px 0px;
+}
+
+.playBtn {
+    font-size: 18px;
+    padding: 5px 10%;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+.playBtn:hover {
+    background-color: #d5a100;
+}
+
+/* about koi pond section ended  */
+
+/* fish section started  */
+.fish {
+    position: absolute;
+    width: 200px;
+}
+
+.leftfish.firstfish {
+    right: 0;
+    animation-name: moveUp;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.rightfish.secfish {
+    left: 0;
+    animation-name: leftmoveUp;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+}
+
+.secfish {
+    bottom: 10%;
+}
+
+.leftfish.secfish {
+    right: 0;
+    animation-name: rightmoveSmooth;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.rightfish.firstfish {
+    left: 0;
+    animation-name: moveSmooth;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-300px) rotate(10deg);
+    }
+
+    40% {
+        transform: translateX(-600px) rotate(-10deg);
+    }
+
+    60% {
+        transform: translateX(-900px) rotate(10deg);
+    }
+
+    80% {
+        transform: translateX(-1200px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translateX(-1500px) rotate(10deg);
+    }
+}
+
+@keyframes leftmoveUp {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(300px) rotate(10deg);
+    }
+
+    40% {
+        transform: translateX(600px) rotate(-10deg);
+    }
+
+    60% {
+        transform: translateX(900px) rotate(10deg);
+    }
+
+    80% {
+        transform: translateX(1200px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translateX(1500px) rotate(10deg);
+    }
+}
+
+@keyframes moveSmooth {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(250px, 100px) rotate(30deg);
+    }
+
+    40% {
+        transform: translate(500px, 80px) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(750px, 0px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(1000px, -100px) rotate(-60deg);
+    }
+
+    100% {
+        transform: translate(1200px, -400px) rotate(-60deg);
+    }
+}
+
+@keyframes rightmoveSmooth {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-300px, 100px) rotate(30deg);
+    }
+
+    40% {
+        transform: translate(-600px, 80px) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(-900px, 0px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-1200px, -100px) rotate(60deg);
+    }
+
+    100% {
+        transform: translate(-1400px, -400px) rotate(60deg);
+    }
+}
+
+/* fish section ended  */
+
+/* bubble section started */
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    animation-name: bubbleMove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+.edgeBubble {
+    animation-duration: 3s;
+}
+
+.sideBubble {
+    animation-duration: 6s;
+}
+
+.middleBubble {
+    animation-duration: 9s;
+}
+
+@keyframes bubbleMove {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+}
+/* bubble section started */
